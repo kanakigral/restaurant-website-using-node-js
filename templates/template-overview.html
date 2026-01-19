@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.4;
+        font-weight: 300;
+        background-color: black;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #b58a62;
+        color: rgb(0, 0, 0);
+        transition: 0.2s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #997350;
+      }
+
+      nav {
+        box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+        position: sticky;
+        top: 0;
+        margin-bottom: 32px;
+        background: #b58a62;
+        padding: 10px;
+        z-index: 50;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        height: 120px;
+        width: 120px;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero_content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: #b58a62;
+      }
+
+      .heroimg {
+        height: 600px;
+        width: 600px;
+        border-radius: 100%;
+      }
+
+      .tag {
+        background-color: #b58a62;
+        padding: 5px 10px;
+        align-self: flex-start;
+        color:#000000
+      }
+
+      .hero_content h1 {
+        font-size: 72px;
+        line-height: 1.2;
+        font-weight: 400;
+      }
+
+      .explore_btn {
+        background-color: #b58a62;
+        padding: 5px 10px;
+        align-self: flex-start;
+        color:#000000
+      }
+
+      .explore_btn:hover {
+        background: #997350;
+      }
+
+      /* Features Section */
+      .features {
+        margin-top: 100px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+      .feature {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        transition: 0.2s ease-in-out;
+        background: #b58a62;
+        border-radius: 15px;
+        font-size: 15px;
+      }
+
+      .feature img {
+        width: 72px;
+      }
+
+      .feature:hover {
+        transition: 0.2s ease-in-out;
+        box-shadow: 5px 5px 10px rgba(1, 1, 1, 0.2);
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 150px 0;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 50px 0;
+      }
+
+      .menu-title {
+        font-size: 3.5rem;
+        color: #b58a62;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .grid {
+        margin-top: 8rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        width: 100%;
+      }
+
+      .image-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        width: 250px;
+        height: 300px;
+      }
+
+      .grid-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .grid-image:hover {
+        transform: scale(1.05);
+      }
+
+      .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #b58a62;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+      }
+
+      .image-label:hover {
+        text-decoration: underline;
+      }
+
+      .image-wrapper:hover .image-label {
+        opacity: 1;
+      }
+
+      .emoji-left {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+
+      .emoji-right {
+        font-size: 2rem;
+        margin-left: 1rem;
+      }
+
+      .cards-container {
+        margin-top: 8rem;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #b58a62;
+        color: rgb(0, 0, 0);
+        padding: 20px 0;
+      }
+
+      .footer_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+      }
+      .flogo{
+        height: 300px;
+        width: 300px;
+        display: flex;
+        place-items: center;
+      }
+      .link_lists h3 {
+        margin-bottom: 10px;
+        color: rgb(0, 0, 0);
+      }
+
+      .link_lists ul {
+        list-style: none;
+      }
+
+      .link_lists ul li {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .news_letter h3 {
+        margin-bottom: 10px;
+        color: rgb(0, 0, 0);
+      }
+
+      .news_letter input {
+        padding: 5px 40px;
+        margin-bottom: 10px;
+      }
+
+      .icon_container {
+        display: flex;
+        gap: 15px;
+        font-size: 32px;
+      }
+
+      input{
+        background-color: #000000;
+        color: #b58a62;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 786px) {
+        .hero {
+          flex-direction: column;
+        }
+
+        .hero_image {
+          display: flex;
+          justify-content: center;
+        }
+        
+        .hero_image img {
+          width: 80%;
+        }
+        
+        .hero_content {
+          gap: 10px;
+          padding: 0 20px;
+        }
+        
+        .hero_content h1 {
+          font-size: 32px;
+        }
+        
+        .features {
+          flex-direction: column;
+        }
+        
+        .feature {
+          flex-direction: column;
+        }
+        
+        .footer_container {
+          flex-direction: column;
+        }
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/7a4b62b0a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navigation container">
+        <div class="logo_container">
+          <img src="images/logo.png" alt="logo" class="logo">
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="container">
+      <div class="hero">
+        <div class="hero_image">
+          <img src="images/hero.heic" alt="hero image" class="heroimg"/>
+        </div>
+        <div class="hero_content">
+          <div class="tag">50% Off on All Products</div>
+          <h1>Enjoy Your Delicious Food</h1>
+          <p>
+            Indulge in Sweet Delights! Treat yourself to our heavenly desserts, 
+            made with love and the finest ingredients.
+          </p>
+          <a href="#menu-grid" class="explore_btn">Explore Now</a>
+        </div>
+      </div>
+      <section class="features">
+        <div class="feature">
+          <img src="images/discount.png" alt="" />
+          <div class="feature_content">
+            <h3>Discount Voucher</h3>
+            A Sweet Deal Just for You! Enjoy exclusive discounts on our 
+             desserts. Don't miss out on the treat!
+          </div>
+        </div>
+        <div class="feature">
+          <img src="images/fresh.png" alt="" />
+          <div class="feature_content">
+            <h3>Freshly Made</h3>
+            Wholesome & Sweet! Our desserts are made with fresh, natural 
+            ingredients to bring you the best flavors.
+          </div>
+        </div>
+        <div class="feature">
+          <img src="images/delivery.png" alt="" />
+          <div class="feature_content">
+            <h3>Fast Home Delivery</h3>
+            Craving Something Sweet? Get your favorite desserts delivered 
+            warm and fresh, right to your doorstep!
+          </div>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <div class="menu">
+        <h2 class="menu-title">Our Menu</h2>
+        <div class="grid" id="menu-grid">
+          <div class="item1">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food1.heic"
+                alt="Choco Shake"
+              />
+              <a href="/product?id=0" class="image-label">Choco Shake</a>
+            </div>
+          </div>
+          <div class="item2">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food2.heic"
+                alt="Biscoff Cake"
+              />
+              <a href="/product?id=1" class="image-label">Biscoff Cake</a>
+            </div>
+          </div>
+          <div class="item3">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food3.heic"
+                alt="Strawberry Stack"
+              />
+              <a href="/product?id=2" class="image-label">Strawberry Stack</a>
+            </div>
+          </div>
+          <div class="item4">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food4.heic"
+                alt="Choco Platter"
+              />
+              <a href="/product?id=3" class="image-label">Choco Platter</a>
+            </div>
+          </div>
+          <div class="item5">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food5.heic"
+                alt="Matcha Cream"
+              />
+              <a href="/product?id=4" class="image-label">Matcha Cream</a>
+            </div>
+          </div>
+          <div class="item6">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food6.webp"
+                alt="Mango Tart"
+              />
+              <a href="/product?id=5" class="image-label">Mango Tart</a>
+            </div>
+          </div>
+          <div class="item7">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food7.heic"
+                alt="Berry Cheesecake"
+              />
+              <a href="/product?id=6" class="image-label">Berry Cheesecake</a>
+            </div>
+          </div>
+          <div class="item8">
+            <div class="image-wrapper">
+              <img
+                class="grid-image"
+                src="images/food8.webp"
+                alt="Pink Berry Shake"
+              />
+              <a href="/product?id=7" class="image-label">Pink Berry Shake</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer_container container">
+        <div class="footer_logo">
+          <img src="images/logo.png" class="flogo" alt="logo" />
+        </div>
+        <div class="link_lists">
+          <h3>Main Links</h3>
+          <ul>
+            <li>Order Tracking</li>
+            <li>New Order</li>
+            <li>Contact Us</li>
+            <li>News & Blogs</li>
+          </ul>
+        </div>
+        <div class="link_lists">
+          <h3>Support</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditons</li>
+          </ul>
+        </div>
+        <div class="news_letter">
+          <h3>Email</h3>
+          <input type="email" placeholder="Enter your Email..." />
+          <h3>Follow Us</h3>
+          <div class="icon_container">
+            <div class="icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <div class="icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

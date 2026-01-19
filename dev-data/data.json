@@ -1,0 +1,75 @@
+[
+  {
+    "id": 0,
+    "productName": "Choco Shake",
+    "image": "images/food1.heic",
+    "from": "USA",
+    "nutrients": "Cocoa powder, milk, chocolate syrup, sugar, whipped cream",
+    "price": "6.50",
+    "description": "A rich and creamy chocolate shake inspired by classic American diners. Made with smooth cocoa and chilled milk for a deep chocolate flavor. Perfectly blended to achieve a thick yet refreshing texture. Topped with a swirl of whipped cream for extra indulgence. Ideal as a dessert drink or a sweet mid-day treat."
+  },
+  {
+    "id": 1,
+    "productName": "Biscoff Cake",
+    "image": "images/food2.heic",
+    "from": "Belgium",
+    "nutrients": "Biscoff biscuits, cream cheese, butter, sugar, caramel spread",
+    "price": "8.90",
+    "description": "A decadent cake inspired by Belgian Biscoff flavors. Layers of soft sponge and creamy caramel-infused frosting. Finished with a smooth Biscoff drip and crunchy biscuit topping. Balanced sweetness with a warm spiced undertone. A must-have for caramel and cookie lovers."
+  },
+  {
+    "id": 2,
+    "productName": "Strawberry Stack",
+    "image": "images/food3.heic",
+    "from": "France",
+    "nutrients": "Pancakes, fresh strawberries, cream, sugar, strawberry sauce",
+    "price": "7.80",
+    "description": "A delicate pancake stack inspired by French café desserts. Soft, fluffy layers filled with fresh strawberries and cream. Lightly sweetened to let the fruit shine through. Finished with a drizzle of strawberry sauce. Perfect for brunch or a light dessert option."
+  },
+  {
+    "id": 3,
+    "productName": "Choco Platter",
+    "image": "images/food4.heic",
+    "from": "Switzerland",
+    "nutrients": "Dark chocolate, cookies, whipped cream, cake slices",
+    "price": "10.50",
+    "description": "An indulgent chocolate platter inspired by Swiss chocolate culture. Features a variety of rich chocolate-based treats. Perfect for sharing or satisfying intense chocolate cravings. Combines soft, crunchy, and creamy textures. A luxurious dessert experience on one plate."
+  },
+  {
+    "id": 4,
+    "productName": "Matcha Cream",
+    "image": "images/food5.heic",
+    "from": "Japan",
+    "nutrients": "Matcha powder, coconut cream, sugar, plant-based milk",
+    "price": "6.90",
+    "description": "A creamy matcha-based dessert inspired by Japanese tea culture. Features a smooth matcha cream with a subtle earthy flavor and a hint of sweetness. Served with a light, airy texture and a delicate matcha aroma. A perfect balance of traditional and modern flavors. Perfect for matcha lovers seeking a refined dessert."
+  },
+
+  {
+    "id": 5,
+    "productName": "Mango Tart",
+    "image": "images/food6.webp",
+    "from": "Thailand",
+    "nutrients": "Mangoes, cream, sugar, pastry crust",
+    "price": "7.50",
+    "description": "A tropical tart inspired by Thai mango desserts. Fresh mango pieces bring natural sweetness and brightness. Set on a crisp tart base with coconut cream. Light, refreshing, and not overly sweet. Ideal for warm days and fruit lovers."
+  },
+  {
+    "id": 6,
+    "productName": "Berry Cheesecake",
+    "image": "images/food7.heic",
+    "from": "Italy",
+    "nutrients": "Cream cheese, mixed berries, sugar, graham cracker crust",
+    "price": "9.20",
+    "description": "A classic Italian-inspired cheesecake topped with a medley of fresh berries. Creamy and rich filling on a crunchy graham cracker crust. Balanced sweetness with a slight tang from the berries. A visually appealing dessert perfect for special occasions or everyday indulgence."
+  },
+  {
+    "id": 7,
+    "productName": "Pink Berry Shake",
+    "image": "images/food8.webp",
+    "from": "South Korea",
+    "nutrients": "Mixed berries, yogurt, milk, honey, ice",
+    "price": "6.80",
+    "description": "A refreshing berry shake inspired by Canadian fruit smoothies. Blended with a mix of fresh berries for a vibrant pink color and natural sweetness. Creamy texture from yogurt and milk, lightly sweetened with honey. Perfect for a healthy treat or post-workout refreshment."
+  }
+]
